@@ -100,6 +100,15 @@
     <img src="icon1.png" alt="Help Icon" width="50" height="50">
     <img src="icon2.png" alt="Help Icon" width="50" height="50">
 
+    <h1 style="margin-top: 20px;">WCAG 2.2.2 - Pause, Stop, Hide</h1>
+
+    <p>This text will automatically scroll and does not provide a mechanism to pause, stop, or hide it, which fails WCAG
+        2.2.2:</p>
+
+    <marquee behavior="scroll" direction="left">This text will keep scrolling and there's no way to stop it!</marquee>
+
+    <p>Remember that the <code>&lt;marquee&gt;</code> element is obsolete and not recommended for use in production
+        websites. It is used here solely for demonstration purposes.</p>
 
     <div style=" min-height: 500px;"></div>
     <script src="script.js"></script>
