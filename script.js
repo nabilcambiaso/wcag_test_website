@@ -1,4 +1,4 @@
-document.getElementById('signupForm').addEventListener('submit', function(event) {
+document.getElementById('signupForm').addEventListener('submit', function (event) {
     let hasError = false;
 
     // Check email
@@ -26,10 +26,17 @@ function isValidEmail(email) {
 
 setTimeout(() => {
     const box = document.getElementById('box');
-    var input = document.createElement('input'); 
-    input.setAttribute('id', 'newInput'); 
-    box.appendChild(input); 
-  
+    var input = document.createElement('input');
+    input.setAttribute('id', 'newInput');
+    box.appendChild(input);
+
     // 👇️ hides element (still takes up space on page)
     // box.style.visibility = 'hidden';
-  }, 5000);
+}, 5000);
+
+function simulateTimeLimit() {
+    setTimeout(function () {
+        // Simulate an action that takes more than 3 seconds to complete
+        alert('Action completed!');
+    }, 3000); // Set a short time limit of 3 seconds
+}
