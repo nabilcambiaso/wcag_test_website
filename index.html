@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,6 +47,31 @@
             color: green;
             width: max-content;
         }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: #111;
+        }
     </style>
 </head>
 
@@ -54,6 +79,12 @@
     <div lang="zzz%$$#$" class="container">
         <h1>Hello Vercel!</h1>
         <p>This is a simple test to deploy on Vercel.</p>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="/alternative.html">Alternative</a></li>
+            <li><a href="#">Contact</a></li>
+            <li style="float:right"><a class="active" href="#about">About</a></li>
+        </ul>
         <h2 style="margin-top: 20px; margin-bottom: 20px;">Accessibility image</h2>
         <img src="./acc.png" class="image">
         <h2 style="margin-top: 20px; margin-bottom: 20px;">Accessibility video</h2>
@@ -97,9 +128,14 @@
         }
     </script>
 
+
     <!-- Icons with the same alt text but different images -->
     <img src="icon1.png" alt="Help Icon" width="50" height="50">
     <img src="icon2.png" alt="Help Icon" width="50" height="50">
+
+    <div id="box" style="height: 150px; width: 150px; background-color: salmon; margin-top: 20px; display: none;">
+        Box
+      </div>
 
     <h1 style="margin-top: 20px;">WCAG 2.2.2 - Pause, Stop, Hide</h1>
 

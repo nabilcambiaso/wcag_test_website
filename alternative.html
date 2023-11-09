@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Alternatives Test Page</title>
+</head>
+<body>
+<h1>Media Alternatives Test Page</h1>
+
+<!-- Scenario 1: Video with no alternative media -->
+<h2>Scenario 1: Video with no alternative media</h2>
+<video width="320" height="240" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<!-- Scenario 2: Video with aria-describedby attribute pointing to a non-existent ID -->
+<h2>Scenario 2: Video with aria-describedby attribute pointing to a non-existent ID</h2>
+<video width="320" height="240" controls aria-describedby="nonExistentDescription">
+  <source src="mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<!-- Scenario 3: Video with aria-describedby attribute pointing to an existing description -->
+<h2>Scenario 3: Video with aria-describedby attribute pointing to an existing description</h2>
+<video width="320" height="240" controls aria-describedby="videoDescription">
+  <source src="mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<div id="videoDescription">A description of the video content.</div>
+
+<!-- Scenario 4: Video with track element of kind descriptions -->
+<h2>Scenario 4: Video with track element of kind descriptions</h2>
+<video width="320" height="240" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <track kind="descriptions" src="desc.vtt" default>
+  Your browser does not support the video tag.
+</video>
+
+<!-- Scenario 5: Video with data-alternative-media attribute -->
+<h2>Scenario 5: Video with data-alternative-media attribute</h2>
+<video width="320" height="240" controls data-alternative-media="altMedia">
+  <source src="mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<div id="altMedia">An alternative media source for the video.</div>
+
+<!-- Scenario 6: Video with a transcript link as the next sibling -->
+<h2>Scenario 6: Video with a transcript link as the next sibling</h2>
+<video width="320" height="240" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<a href="transcript.html">Video Transcript</a>
+
+</body>
+</html>
+
+<!-- Scenario 7: iframe with no alternative media -->
+<h2>Scenario 7: iframe with no alternative media</h2>
+<iframe src="example_frame.html" width="300" height="200">
+  Your browser does not support iframes.
+</iframe>
+
+<!-- Scenario 8: iframe with aria-describedby attribute pointing to an existing description -->
+<h2>Scenario 8: iframe with aria-describedby attribute pointing to an existing description</h2>
+<iframe src="example_frame.html" width="300" height="200" aria-describedby="iframeDescription">
+  Your browser does not support iframes.
+</iframe>
+<div id="iframeDescription">A description of the iframe content.</div>
+
+<!-- Scenario 9: object with no alternative media -->
+<h2>Scenario 9: object with no alternative media</h2>
+<object data="example_object_data.swf" width="400" height="300" type="application/x-shockwave-flash">
+  <param name="movie" value="example_object_data.swf">
+  Your browser does not support the object element.
+</object>
+
+<!-- Scenario 10: object with a nested description -->
+<h2>Scenario 10: object with a nested description</h2>
+<object data="example_object_data.swf" width="400" height="300" type="application/x-shockwave-flash">
+  <param name="movie" value="example_object_data.swf">
+  <div>A description of the object content.</div>
+  Your browser does not support the object element.
+</object>
+
+<!-- Scenario 11: embed with no alternative media -->
+<h2>Scenario 11: embed with no alternative media</h2>
+<embed src="example_embed.swf" width="400" height="300" type="application/x-shockwave-flash">
+  Your browser does not support the embed tag.
+</embed>
+
+<!-- Scenario 12: embed with aria-describedby attribute pointing to an existing description -->
+<h2>Scenario 12: embed with aria-describedby attribute pointing to an existing description</h2>
+<embed src="example_embed.swf" width="400" height="300" type="application/x-shockwave-flash" aria-describedby="embedDescription">
+  Your browser does not support the embed tag.
+</embed>
+<div id="embedDescription">A description of the embed content.</div>

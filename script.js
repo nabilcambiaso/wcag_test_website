@@ -23,3 +23,12 @@ function isValidEmail(email) {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return regex.test(email);
 }
+
+setTimeout(() => {
+    const box = document.getElementById('box');
+  
+    box.style.display = 'block';
+  
+    // 👇️ hides element (still takes up space on page)
+    // box.style.visibility = 'hidden';
+  }, 5000);
