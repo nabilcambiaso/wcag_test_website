@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WCAG 2.4.7 Example</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+    <h1 style="margin-top: 20px; margin-bottom: 20px;">WCAG 2.4.7 Example</h1>
+
+  <!-- Example 1: Hidden focusable element -->
+  <a href="#" tabindex="0" class="hidden">Hidden Focusable Link</a>
+
+  <!-- Example 2: Visible focusable element without focus indicator -->
+  <button tabindex="0">Button without Focus Indicator</button>
+
+  <!-- Example 3: Nested focusable elements -->
+  <div tabindex="0">
+    <a href="#" tabindex="0">Nested Link 1</a>
+    <button tabindex="0">Nested Button</button>
+    <a href="#" tabindex="0">Nested Link 2</a>
+  </div>
+
+  <!-- Add more examples as needed -->
+
+</body>
+</html>
