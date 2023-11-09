@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WCAG 2.2.3 Example</title>
+</head>
+<body>
+
+  <h1>WCAG 2.2.3 Example</h1>
+
+  <button style="margin-top: 40px;" onclick="simulateTimeLimit()">Click me within 3 seconds</button>
+
+  <script>
+    function simulateTimeLimit() {
+      setTimeout(function() {
+        // Simulate an action that takes more than 3 seconds to complete
+        alert('Action completed!');
+      }, 3000); // Set a short time limit of 3 seconds
+    }
+  </script>
+
+</body>
+</html>
