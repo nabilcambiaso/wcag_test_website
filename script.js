@@ -26,8 +26,9 @@ function isValidEmail(email) {
 
 setTimeout(() => {
     const box = document.getElementById('box');
-  
-    box.style.display = 'block';
+    var input = document.createElement('input'); 
+    input.setAttribute('id', 'newInput'); 
+    box.appendChild(input); 
   
     // 👇️ hides element (still takes up space on page)
     // box.style.visibility = 'hidden';
