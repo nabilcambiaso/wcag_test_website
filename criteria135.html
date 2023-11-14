@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Autocomplete Form Test</title>
+</head>
+<body>
+    <form id="test-form">
+        <!-- Text Fields -->
+        <input type="text" autocomplete="name" /><br>
+        <input type="text" autocomplete="email" /><br>
+        <input type="text" autocomplete="invalid-value" /><br> <!-- Invalid -->
+
+        <!-- Multiline Field -->
+        <textarea autocomplete="street-address"></textarea><br>
+
+        <!-- Password Fields -->
+        <input type="password" autocomplete="current-password" /><br>
+        <input type="password" autocomplete="new-password" /><br>
+        <input type="password" autocomplete="invalid-password" /><br> <!-- Invalid -->
+
+        <!-- URL Field -->
+        <input type="url" autocomplete="url" /><br>
+        <input type="url" autocomplete="photo" /><br>
+        <input type="url" autocomplete="invalid-url" /><br> <!-- Invalid -->
+
+        <!-- Telephone Fields -->
+        <input type="tel" autocomplete="tel" /><br>
+        <input type="tel" autocomplete="tel-country-code" /><br>
+        <input type="tel" autocomplete="invalid-tel" /><br> <!-- Invalid -->
+
+        <!-- Numeric Fields -->
+        <input type="number" autocomplete="cc-exp-month" /><br>
+        <input type="number" autocomplete="cc-exp-year" /><br>
+        <input type="number" autocomplete="bday-month" /><br>
+        <input type="number" autocomplete="invalid-numeric" /><br> <!-- Invalid -->
+
+        <!-- Date Fields -->
+        <input type="date" autocomplete="bday" /><br>
+        <input type="month" autocomplete="cc-exp" /><br>
+        <input type="date" autocomplete="invalid-date" /><br> <!-- Invalid -->
+
+        <!-- Hidden Field -->
+        <input type="hidden" autocomplete="street-address" /><br>
+
+        <!-- Select Field -->
+        <select autocomplete="country-name">
+            <option value="USA">United States</option>
+            <option value="CA">Canada</option>
+        </select><br>
+    </form>
+</body>
+</html>
