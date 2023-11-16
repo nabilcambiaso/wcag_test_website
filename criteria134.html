@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientation Test 1.3.4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .main-content {
+            width: 500px;
+            height: 300px;
+            overflow: auto;
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (orientation: landscape) {
+            .main-content {
+                /* In landscape, the content becomes too wide and may not be fully visible */
+                width: 1200px;
+                overflow: hidden; /* Content is not scrollable in landscape */
+            }
+        }
+
+        .footer {
+            background-color: #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1>Main Content</h1>
+        <p>This content area behaves differently in portrait and landscape orientations.</p>
+    </div>
+    <div class="footer">Footer Content</div>
+</body>
+</html>
