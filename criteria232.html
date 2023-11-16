@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criteria 2.3.2 Example</title>
+    <style>
+        /* CSS animations with timing less than 300ms */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        /* CSS transitions with timing less than 300ms */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: width 0.2s ease-in-out;
+        }
+
+        .box:hover {
+            width: 150px;
+        }
+
+        /* Timer set to less than 300ms */
+        #timer {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Criteria 2.3.2 Example</h1>
+
+    <!-- CSS animations with timing less than 300ms -->
+    <div style="animation: slideIn 0.2s ease-in-out; width: 100px; height: 100px; background-color: red;"></div>
+
+    <!-- CSS transitions with timing less than 300ms -->
+    <div class="box"></div>
+
+    <!-- Timer set to less than 300ms -->
+    <div id="timer"></div>
+
+    <script>
+        // JavaScript timer set to less than 300ms
+        setTimeout(function() {
+            document.getElementById('timer').innerText = 'Timer Done!';
+        }, 200); // 200ms delay
+    </script>
+</body>
+</html>

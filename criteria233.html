@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criteria 2.3.3 Example</title>
+    <style>
+        /* CSS animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* CSS transitions */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .box:hover {
+            width: 150px;
+        }
+
+        /* CSS focus */
+        .input-box {
+            margin: 20px;
+        }
+
+        .input-box input:focus {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Criteria 2.3.3 Example</h1>
+
+    <!-- CSS animations -->
+    <div style="animation: fadeIn 2s ease-in-out; width: 100px; height: 100px; background-color: red;"></div>
+
+    <!-- CSS transitions -->
+    <div class="box"></div>
+
+    <!-- CSS focus -->
+    <div class="input-box">
+        <label for="inputField">Focus Example:</label>
+        <input type="text" id="inputField">
+    </div>
+</body>
+</html>
