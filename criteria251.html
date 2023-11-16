@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multipoint Gesture Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gesture-box" style="width: 200px; height: 200px; background-color: lightblue; position: relative;">
+        <p>Click and drag to simulate a multipoint gesture.</p>
+    </div>
+    
+    <script>
+        const gestureBox = document.getElementById("gesture-box");
+        let isMultipointGesture = false;
+
+        gestureBox.addEventListener("mousedown", () => {
+            isMultipointGesture = false;
+        });
+
+        gestureBox.addEventListener("mousemove", (event) => {
+            if (event.buttons === 1) {
+                // Mouse button is held down (simulate touch points)
+                isMultipointGesture = true;
+            }
+        });
+
+        gestureBox.addEventListener("mouseup", () => {
+            if (isMultipointGesture) {
+                alert("Multipoint gesture detected!");
+            }
+        });
+    </script>
+</body>
+</html>
