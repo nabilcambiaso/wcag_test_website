@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page for Criteria 2.3.1</title>
+    <style>
+        .animated {
+            animation: example 2s infinite;
+        }
+
+        @keyframes example {
+            0% {background-color: red;}
+            25% {background-color: yellow;}
+            50% {background-color: blue;}
+            75% {background-color: green;}
+            100% {background-color: red;}
+        }
+
+        .transition {
+            transition: background-color 0.5s ease;
+            background-color: pink;
+        }
+
+        .transition:hover {
+            background-color: #ff0000;
+        }
+
+        .high-luminance {
+            background-color: white;
+            color: black;
+        }
+
+        .low-luminance {
+            background-color: black;
+            color: white;
+        }
+
+        .red-background {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated">Animated Element</div>
+    <div class="transition">Transition Element</div>
+    <div class="high-luminance">High Luminance Element</div>
+    <div class="low-luminance">Low Luminance Element</div>
+    <div class="red-background">Red Background Element</div>
+</body>
+</html>
