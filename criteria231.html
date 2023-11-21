@@ -5,47 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Page for Criteria 2.3.1</title>
     <style>
-        .animated {
-            animation: example 2s infinite;
+        .animated-red {
+            animation: colorChange 2s infinite alternate;
+            background-color: red; /* Initial color */
         }
 
-        @keyframes example {
-            0% {background-color: red;}
-            25% {background-color: yellow;}
-            50% {background-color: blue;}
-            75% {background-color: green;}
-            100% {background-color: red;}
+        @keyframes colorChange {
+            from { background-color: yellow; }
+            to { background-color: green; }
         }
 
-        .transition {
-            transition: background-color 0.5s ease;
-            background-color: pink;
+        .transition-red {
+            transition: background-color 1s ease;
+            background-color: red; /* Initial color */
         }
 
-        .transition:hover {
-            background-color: #ff0000;
+        .transition-red:hover {
+            background-color: blue; /* Color change on hover */
         }
 
-        .high-luminance {
-            background-color: white;
-            color: black;
+        .high-luminance-animated {
+            animation: luminanceChange 3s infinite alternate;
+            color: #000;
+            background-color: #fff; /* High luminance color */
         }
 
-        .low-luminance {
-            background-color: black;
-            color: white;
+        @keyframes luminanceChange {
+            from { background-color: #eee; }
+            to { background-color: #fff; }
         }
 
-        .red-background {
-            background-color: red;
+        .red-color-transition {
+            color: red; /* Red text color */
+            transition: color 1s ease;
+        }
+
+        .red-color-transition:hover {
+            color: blue; /* Color change on hover */
         }
     </style>
 </head>
 <body>
-    <div class="animated">Animated Element</div>
-    <div class="transition">Transition Element</div>
-    <div class="high-luminance">High Luminance Element</div>
-    <div class="low-luminance">Low Luminance Element</div>
-    <div class="red-background">Red Background Element</div>
+    <div class="animated-red">This element has CSS animation with red color.</div>
+    <div class="transition-red">This element has CSS transition with red color.</div>
+    <div class="high-luminance-animated">This element has CSS animation with high luminance.</div>
+    <p class="red-color-transition">This text has CSS transition with red color.</p>
 </body>
 </html>
