@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Sizing Test</title>
+    <style>
+        /* Example of using vh units for text sizing (which is not allowed) */
+        p {
+            font-size: 5vh;
+        }
+
+        /* Example of using vw units for text sizing (which is not allowed) */
+        h1 {
+            font-size: 3vw;
+        }
+
+        /* Example of an element that exceeds the viewport width */
+        .wide-element {
+            width: 120%;
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is an example heading</h1>
+    <p>This is some example text with vh units for text sizing.</p>
+    <div class="wide-element">This element exceeds the viewport width.</div>
+</body>
+</html>
